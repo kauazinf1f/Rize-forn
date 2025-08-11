@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rize Forn - Discord Nitro e Fornecedores Premium</title>
+    <meta name="description" content="A Rize Forn oferece Discord Nitro premium e soluções de fornecimento para lojas com os melhores preços e qualidade garantida.">
+    <meta name="keywords" content="discord nitro, fornecedores, lojas, produtos digitais, nitro premium">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rizeforn.com">
+    <meta property="og:title" content="Rize Forn - Discord Nitro e Fornecedores Premium">
+    <meta property="og:description" content="A Rize Forn oferece Discord Nitro premium e soluções de fornecimento para lojas com os melhores preços e qualidade garantida.">
+    <meta property="og:image" content="https://rizeforn.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rizeforn.com">
+    <meta property="twitter:title" content="Rize Forn - Discord Nitro e Fornecedores Premium">
+    <meta property="twitter:description" content="A Rize Forn oferece Discord Nitro premium e soluções de fornecimento para lojas com os melhores preços e qualidade garantida.">
+    <meta property="twitter:image" content="https://rizeforn.com/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <span class="logo-text">RIZE FORN</span>
+                </div>
+                
+                <nav class="nav-desktop">
+                    <a href="#home" class="nav-link" data-testid="nav-inicio">Início</a>
+                    <a href="#products" class="nav-link" data-testid="nav-produtos">Produtos</a>
+                    <a href="#testimonials" class="nav-link" data-testid="nav-depoimentos">Depoimentos</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="cart-btn" id="cartBtn" data-testid="button-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" data-testid="button-mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav class="nav-mobile" id="navMobile">
+                <a href="#home" class="nav-link" data-testid="mobile-nav-inicio">Início</a>
+                <a href="#products" class="nav-link" data-testid="mobile-nav-produtos">Produtos</a>
+                <a href="#testimonials" class="nav-link" data-testid="mobile-nav-depoimentos">Depoimentos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-backdrop" id="cartBackdrop" data-testid="cart-backdrop"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Carrinho</h3>
+                <button class="cart-close" id="cartClose" data-testid="button-close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-body" id="cartBody">
+                <div class="cart-empty" id="cartEmpty" data-testid="cart-empty">
+                    <i class="fas fa-shopping-cart cart-empty-icon"></i>
+                    <p>Seu carrinho está vazio.</p>
+                    <small>Adicione produtos ao seu carrinho para que possa vê-los aqui.</small>
+                </div>
+                
+                <div class="cart-items" id="cartItems"></div>
+            </div>
+            
+            <div class="cart-footer" id="cartFooter">
+                <div class="cart-total">
+                    <span>Valor Total:</span>
+                    <span class="total-price" id="totalPrice" data-testid="cart-total">R$ 0,00</span>
+                </div>
+                <button class="checkout-btn" data-testid="button-checkout">
+                    Ir para a compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Finalizar Compra</h3>
+                <button class="modal-close" id="modalClose" data-testid="button-close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="checkout-summary">
+                    <h4>Resumo do pedido</h4>
+                    <div class="checkout-items" id="checkoutItems"></div>
+                    <div class="checkout-total">
+                        <span>Total:</span>
+                        <span class="total-amount" id="checkoutTotal">R$ 0,00</span>
+                    </div>
+                </div>
+                
+                <div class="payment-section">
+                    <h4>Pagamento via PIX</h4>
+                    <div class="pix-info">
+                        <div class="pix-key">
+                            <label>Chave PIX:</label>
+                            <div class="pix-key-value">
+                                <span id="pixKey">d4f02c96-4877-4a46-a403-afc607a043e6</span>
+                                <button class="copy-btn" onclick="copyPixKey()" data-testid="button-copy-pix">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-instructions">
+                            <h5>Instruções de pagamento:</h5>
+                            <ol>
+                                <li>Copie a chave PIX acima</li>
+                                <li>Realize o pagamento em seu banco</li>
+                                <li>Tire uma foto do comprovante</li>
+                                <li>Entre no nosso servidor Discord</li>
+                                <li>Envie o comprovante para receber seu produto</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="discord-server">
+                            <h5>Servidor para envio do comprovante:</h5>
+                            <div class="discord-link">
+                                <i class="fab fa-discord"></i>
+                                <a href="https://discord.gg/apTJrXZhnP" target="_blank" data-testid="link-discord">
+                                    discord.gg/apTJrXZhnP
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeCheckoutModal()" data-testid="button-cancel-checkout">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary" onclick="confirmPayment()" data-testid="button-confirm-payment">
+                    Entendi, vou pagar via PIX
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <div class="status-dot"></div>
+                        Estamos online
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        A Melhor Loja de 
+                        <span class="gradient-text">Discord Nitro e Fornecimento</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        A <strong>RIZE FORN</strong> é especializada em Discord Nitro premium e 
+                        soluções de fornecimento para lojas, oferecendo os melhores preços 
+                        e qualidade garantida no mercado.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" data-scroll="products" data-testid="button-ver-produtos">
+                            Ver produtos
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-outline" data-scroll="testimonials" data-testid="button-ver-depoimentos">
+                            Ver depoimentos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Categorias Populares</h2>
+                    <p>Explore nossas categorias mais procuradas</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://cdn.discordapp.com/attachments/1402478377310617633/1403482942612967497/storm_assinatura_sultanzinho.psd_20250808_174824_0000.png?ex=689b0298&is=6899b118&hm=54b646d68b6411f7965aac4cfac816ce1c988438c8e37cbe4e8e113dd788bf64&" 
+                                 alt="Discord Nitro category" loading="lazy">
+                            <div class="category-overlay"></div>
+                            <div class="category-content">
+                                <span class="category-title">DISCORD NITRO</span>
+                                <p class="category-subtitle">Nitro Premium, Basic e mais</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <div class="category-image">
+                            <img src="https://cdn.discordapp.com/attachments/1402478377310617633/1403921056678547497/painc-1.png?ex=689aa05f&is=68994edf&hm=a61b949aea03dca3e832edb652e355beb934136a42a068613dcdedeadee58745&" 
+                                 alt="Fornecedores category" loading="lazy">
+                            <div class="category-overlay"></div>
+                            <div class="category-content">
+                                <span class="category-title">FORNECEDORES</span>
+                                <p class="category-subtitle">Soluções para sua loja</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Produtos em Destaque</h2>
+                    <p>Descontos incríveis em produtos digitais premium</p>
+                </div>
+                
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>O que nossos clientes dizem</h2>
+                    <p>Centenas de clientes satisfeitos com nossos produtos</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-testid="testimonial-1">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Excelente atendimento e produtos de qualidade. Recomendo muito a RIZE FORN!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://cdn.discordapp.com/avatars/1220521588311719968/211a06e079bc87c8e660b3b1fdf27588.png?size=2048" 
+                                 alt="kaua10_0 - Cliente satisfeito" loading="lazy">
+                            <div>
+                                <p class="author-name">kaua10_0</p>
+                                <p class="author-role">Cliente verificado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-testid="testimonial-2">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Preços incríveis e entrega rápida. Já comprei várias vezes e sempre tive uma ótima experiência."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://cdn.discordapp.com/avatars/1391529081022976030/ba7cd21483c878e149d151f851d7f702.png?size=2048" 
+                                 alt="dcvbcvbcvb7889 - Cliente satisfeita" loading="lazy">
+                            <div>
+                                <p class="author-name">dcvbcvbcvb7889</p>
+                                <p class="author-role">Cliente verificada</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-testid="testimonial-3">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "A melhor loja de produtos digitais que já usei. Site confiável e produtos funcionam perfeitamente."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://cdn.discordapp.com/avatars/727151044223827990/be28d7c2c64aa42cccd42920cc6546a5.png?size=2048" 
+                                 alt="oioi797 - Cliente satisfeito" loading="lazy">
+                            <div>
+                                <p class="author-name">oioi797</p>
+                                <p class="author-role">Cliente verificado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <span class="logo-text">RIZE FORN</span>
+                    </div>
+                    <p class="footer-description">
+                        A melhor loja de Discord Nitro e fornecimento do Brasil. Oferecemos qualidade, 
+                        segurança e os melhores preços do mercado.
+                    </p>
+
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Links úteis</h4>
+                    <ul>
+                        <li><a href="#home" data-testid="footer-link-inicio">Início</a></li>
+                        <li><a href="#products" data-testid="footer-link-produtos">Produtos</a></li>
+                        <li><a href="#testimonials" data-testid="footer-link-depoimentos">Depoimentos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-support">
+                    <h4>Suporte</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Garantias</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RIZE FORN. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
