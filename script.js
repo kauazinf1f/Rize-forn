@@ -39,7 +39,7 @@ const products = [
         price: 1.50,
         originalPrice: 3.00,
         discount: 50, // (3 - 1.5)/3 * 100 = 50%
-        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1403482863873294589/20250808_175815_0000.png?ex=689b0286&is=6899b106&hm=1e2e67224b94d29765edaefa2e8a97f41022116310e54b5b27fe94fdd3abe58f&',
+        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404539406886371358/netflix_by_px.psd_20250811_155739_0000.png?ex=689b8ec1&is=689a3d41&hm=babef4e618c92c9fec11e408836c22f955508f72a91d8c6aa18fef6ef0ad2196&',
         category: 'discord',
         inStock: true,
         description: '100% membros reais. Entra em qualquer servidor'
