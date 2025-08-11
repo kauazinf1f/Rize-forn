@@ -50,7 +50,7 @@ const products = [
         price: 2.50,
         originalPrice: 4.00,
         discount: 33,
-        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1403482129706516500/storm_assinatura_sultanzinho.psd_20250808_175549_0000.png?ex=689b01d7&is=6899b057&hm=000de98c2a6b6e5f05ee801190479addf5d2fc285db198faade300b109ae477f&',
+        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456303404912720/netflix_by_px.psd_20250811_091027_0000.png?ex=689b415c&is=6899efdc&hm=75562f1092fa91dfc47e784152186188498aaa84b6670a6e3aac6fcdae33bda5&',
         category: 'assinatura',
         inStock: false,
         description: 'Garantia de 4 dias. Duração de 30 dias. Não alterar a senha (perde o acesso). Pode usar na TV, celular e notebook. Qualidade HD/UHD. Sem anúncios. Acesso a todo o catálogo (séries, filmes e lançamentos)'
@@ -61,7 +61,7 @@ const products = [
         price: 1.20,
         originalPrice: 2.50,
         discount: 33,
-        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1403482129706516500/storm_assinatura_sultanzinho.psd_20250808_175549_0000.png?ex=689b01d7&is=6899b057&hm=000de98c2a6b6e5f05ee801190479addf5d2fc285db198faade300b109ae477f&',
+        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456314414825612/netflix_by_px.psd_20250811_092337_0000.png?ex=689b415e&is=6899efde&hm=2483dac1fb008ddb69bd887a690a6e6aaf522ccfe6405f1fbefcb2998fef2009&',
         category: 'assinatura',
         inStock: false,
         description: 'Acesso completo ao Crunchyroll premium com anime e mangá'
@@ -72,7 +72,7 @@ const products = [
         price: 2.50,
         originalPrice: 5.00,
         discount: 40,
-        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1403482129706516500/storm_assinatura_sultanzinho.psd_20250808_175549_0000.png?ex=689b01d7&is=6899b057&hm=000de98c2a6b6e5f05ee801190479addf5d2fc285db198faade300b109ae477f&',
+        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456322669215915/netflix_by_px.psd_20250811_101149_0000.png?ex=689b4160&is=6899efe0&hm=9a31c84ff3630e9503a86da6182e9d588506668d08abbfffa7c95564f165900e&',
         category: 'assinatura',
         inStock: false,
         description: 'Acesso completo ao Disney+ com todo o catálogo Disney, Marvel, Star Wars'
