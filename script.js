@@ -74,7 +74,7 @@ const products = [
         discount: 52, // (2.5 - 1.2)/2.5 * 100 = 52%
         image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456314414825612/netflix_by_px.psd_20250811_092337_0000.png?ex=689b415e&is=6899efde&hm=2483dac1fb008ddb69bd887a690a6e6aaf522ccfe6405f1fbefcb2998fef2009&',
         category: 'assinatura',
-        inStock: false,
+        inStock: true,
         description: 'Acesso completo ao Crunchyroll premium com anime e mangá'
     },
     {
