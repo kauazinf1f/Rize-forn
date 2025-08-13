@@ -6,7 +6,7 @@ const products = [
         price: 2.00,
         originalPrice: 3.00,
         discount: 33.33, // (3 - 2)/3 * 100 = 33,33%
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404494467804958810/netflix_by_px.psd_20250811_125227_0000.png?ex=689b64e7&is=689a1367&hm=78154cbebec390a9bb8819ca36bef95b265166d28aa9e2b2b74a40628f0c3286&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404495668822933514/netflix_by_px.psd_20250811_125227_0000.png?ex=689d6045&is=689c0ec5&hm=69b9b710a7182e23a3386669456d67a3bd589c4b9565bf00a1fff68919fcfb4c&',
         category: 'discord',
         inStock: false,
         description: 'Tenha uma conta com Nitro Boost ativo sem pagar o preço cheio do Discord'
@@ -17,7 +17,7 @@ const products = [
         price: 15.00,
         originalPrice: 20.00,
         discount: 25, // (20 - 15)/20 * 100 = 25%
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404494489036394607/netflix_by_px.psd_20250811_125656_0000.png?ex=689b64ec&is=689a136c&hm=9f9fb2bbad93eaf2f3ffb95867a7bcb78a79228b225e5cab0a97c3f6953cae93&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404495661487100137/netflix_by_px.psd_20250811_125656_0000.png?ex=689d6043&is=689c0ec3&hm=61c614b5c7ea47688f5ee93ccfb38eecd397bb432392ff6ef712572c2a8147a8&',
         category: 'discord',
         inStock: false,
         description: 'Tenha **Nitro GIF** e desbloqueie todos os recursos premium do Discord'
@@ -28,7 +28,7 @@ const products = [
         price: 15.00,
         originalPrice: 20.00,
         discount: 25, // igual acima, 25%
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404494497345175664/netflix_by_px.psd_20250811_125855_0000.png?ex=689b64ee&is=689a136e&hm=9f5366b1ca9f58a757b99820e9d264974494cf8e2bb66e3fbeb9b5d25840bc37&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404495653882691745/netflix_by_px.psd_20250811_125855_0000.png?ex=689d6042&is=689c0ec2&hm=45aa7fd777700e822ea49521223add0fb3cc46121df850ae2390e5b6763fccba&',
         category: 'discord',
         inStock: false,
         description: 'Tenha Impulsos ativos no seu servidor sem pagar o preço cheio do Discord'
@@ -39,7 +39,7 @@ const products = [
         price: 1.50,
         originalPrice: 3.00,
         discount: 50, // (3 - 1.5)/3 * 100 = 50%
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404539406886371358/netflix_by_px.psd_20250811_155739_0000.png?ex=689b8ec1&is=689a3d41&hm=babef4e618c92c9fec11e408836c22f955508f72a91d8c6aa18fef6ef0ad2196&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404539572289015989/netflix_by_px.psd_20250811_155739_0000.png?ex=689d8929&is=689c37a9&hm=0ec5a335b5cffd8bb1346be848089e60283ea71aea1cd759a6bd8fdbf9193e5a&',
         category: 'discord',
         inStock: true,
         description: '100% membros reais. Entra em qualquer servidor'
@@ -50,7 +50,7 @@ const products = [
         price: 2.50,
         originalPrice: 4.00,
         discount: 37.5, // (4 - 2.5)/4 * 100 = 37,5%
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456303404912720/netflix_by_px.psd_20250811_091027_0000.png?ex=689b415c&is=6899efdc&hm=75562f1092fa91dfc47e784152186188498aaa84b6670a6e3aac6fcdae33bda5&',
+        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456303404912720/netflix_by_px.psd_20250811_091027_0000.png?ex=689de45c&is=689c92dc&hm=a74ef606002fb27d2244acedfc6041531140dce3823d8a8520aa26739f281c8b&',
         category: 'assinatura',
         inStock: false,
         description: 'Garantia de 4 dias. Duração de 30 dias. Não alterar a senha (perde o acesso). Pode usar na TV, celular e notebook. Qualidade HD/UHD. Sem anúncios. Acesso a todo o catálogo (séries, filmes e lançamentos)'
@@ -61,7 +61,7 @@ const products = [
         price: 6.00,
         originalPrice: 8.00,
         discount: 25, // (8 - 6)/8 * 100 = 25%
-        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404486968548528168/netflix_by_px.psd_20250811_122850_0000.png?ex=689b5deb&is=689a0c6b&hm=1576b427044e1ae76b5a747b97294a6724c9095d55dcbb9cfcffc183b0742f3f&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404486968548528168/netflix_by_px.psd_20250811_122850_0000.png?ex=689d582b&is=689c06ab&hm=0c65eeb4e0e49017641a6bfd4aa1bf36d0c24d5a0e3865e3c6d2395a2cd552b2&',
         category: 'assinatura',
         inStock: true,
         description: 'Garantia de 30 dias Duração de 12 meses Não alterar a senha (perde o acesso) Pode usar no celular, computador, tablet e smart TV Música sem anúncios e em alta qualidade Playlists e músicas para ouvir offline Acesso ilimitado a todo o catálogo do Spotify'
@@ -72,9 +72,9 @@ const products = [
         price: 1.20,
         originalPrice: 2.50,
         discount: 52, // (2.5 - 1.2)/2.5 * 100 = 52%
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456314414825612/netflix_by_px.psd_20250811_092337_0000.png?ex=689b415e&is=6899efde&hm=2483dac1fb008ddb69bd887a690a6e6aaf522ccfe6405f1fbefcb2998fef2009&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404440778457088031/netflix_by_px.psd_20250811_092337_0000.png?ex=689dd5e6&is=689c8466&hm=25e425746b40534821b4618afdbfe4ad1afe13f1c84647f64e4bd252fc957455&',
         category: 'assinatura',
-        inStock: true,
+        inStock: false,
         description: 'Acesso completo ao Crunchyroll premium com anime e mangá'
     },
     {
@@ -83,7 +83,7 @@ const products = [
         price: 2.50,
         originalPrice: 5.00,
         discount: 50, // (5 - 2.5)/5 * 100 = 50%
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404456322669215915/netflix_by_px.psd_20250811_101149_0000.png?ex=689b4160&is=6899efe0&hm=9a31c84ff3630e9503a86da6182e9d588506668d08abbfffa7c95564f165900e&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404452892282327081/netflix_by_px.psd_20250811_101149_0000.png?ex=689de12e&is=689c8fae&hm=1ca61e66a9f462630e38230f94dc355f4d0249894f6ebcc2d4d1ac729c74d111&',
         category: 'assinatura',
         inStock: false,
         description: 'Acesso completo ao Disney+ com todo o catálogo Disney, Marvel, Star Wars'
@@ -92,7 +92,7 @@ const products = [
         id: 'canva-pro',
         name: 'CANVA PRO MENSAL',
         price: 1.20,
-        image: 'https://cdn.discordapp.com/attachments/1404426544818028629/1404491411423760536/netflix_by_px.psd_20250811_124226_0000.png?ex=689b620e&is=689a108e&hm=c48dd3d3b034980f30296b44a7d8ad48810d51b278541d93116c5343f4c1eb4b&',
+        image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404490837143851019/netflix_by_px.psd_20250811_124226_0000.png?ex=689d5bc5&is=689c0a45&hm=1fe499584f406c0398a96c2e3bea74b16feb65f338eb9cdaf1014328f517ebea&',
         category: 'assinatura',
         inStock: false,
         description: 'Ferramenta de design profissional com recursos premium'
@@ -101,7 +101,7 @@ const products = [
         id: 'forn-gringo',
         name: 'FORN GRINGO',
         price: 3.00,
-        image: 'https://cdn.discordapp.com/attachments/1397931737782157372/1399189692036939849/painc-1.png?ex=689a8d72&is=68993bf2&hm=b3cdb31d4c76c8a470210daa37cff861c837150ba5ceb8959e1e8e17b9f1b35e&',
+        image: 'https://cdn.discordapp.com/attachments/1397931737782157372/1399189692036939849/painc-1.png?ex=689dd932&is=689c87b2&hm=5d002642ccdb26019434963e1bfddb2a226e602b3d3fe434d8ea32d51c4ffe94&',
         category: 'fornecedor',
         inStock: true,
         description: 'Fornecedores de confiança internacionais. Itens exclusivos de Grow a Garden. Itens raros de Roube um Brairot. Estoques para diversos jogos populares. Revenda 100% autorizada e liberada. Produtos testados e entregues no ato'
@@ -110,7 +110,7 @@ const products = [
         id: 'forn-rize',
         name: 'FORN RIZE',
         price: 6.00,
-        image: 'https://cdn.discordapp.com/attachments/1397931737782157372/1399189692036939849/painc-1.png?ex=689a8d72&is=68993bf2&hm=b3cdb31d4c76c8a470210daa37cff861c837150ba5ceb8959e1e8e17b9f1b35e&',
+        image: 'https://cdn.discordapp.com/attachments/1397931737782157372/1399189692036939849/painc-1.png?ex=689dd932&is=689c87b2&hm=5d002642ccdb26019434963e1bfddb2a226e602b3d3fe434d8ea32d51c4ffe94&',
         category: 'fornecedor',
         inStock: true,
         description: 'Acesso direto ao fornecedor gringo (GAG e muito mais) Fornecedores confiáveis de Blox Fruits (Itens, frutas e mais) Fornecedores de Nitros e Impulsos com preços absurdamente baixos Pack Loja completo com modelos prontos, banners, gifs, métodos e mais Atualizações constantes + grupo fechado com acesso vitalício'
