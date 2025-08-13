@@ -63,7 +63,7 @@ const products = [
         discount: 25, // (8 - 6)/8 * 100 = 25%
         image: 'https://cdn.discordapp.com/attachments/1402478377310617633/1404486968548528168/netflix_by_px.psd_20250811_122850_0000.png?ex=689b5deb&is=689a0c6b&hm=1576b427044e1ae76b5a747b97294a6724c9095d55dcbb9cfcffc183b0742f3f&',
         category: 'assinatura',
-        inStock: false,
+        inStock: true,
         description: 'Garantia de 30 dias Duração de 12 meses Não alterar a senha (perde o acesso) Pode usar no celular, computador, tablet e smart TV Música sem anúncios e em alta qualidade Playlists e músicas para ouvir offline Acesso ilimitado a todo o catálogo do Spotify'
     },
     {
