@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="pt"><head>  <meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  
+<title>SHOOT XIT</title>  
+<link rel="stylesheet" href="style.css">  
+<script src="particles.min.js"></script>  
+<style>  
+    /* ===== RESET ===== */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+
+/* ===== BODY ===== */
+body {
+background: linear-gradient(135deg, #000000, #0b0014);
+color: #ffffff;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+min-height: 100vh;
+}
+
+/* ===== MENU CONTAINER ===== */
+.menu-container {
+margin-top: 20px;
+width: 100%;
+max-width: 450px;
+padding: 10px;
+}
+
+/* ===== MENU ===== */
+.menu {
+background: rgba(20, 20, 20, 0.85);
+border-radius: 16px;
+padding: 16px;
+box-shadow: 0 0 25px rgba(168,85,247,0.8);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(168,85,247,0.8);
+}
+
+/* ===== TITLE ===== */
+.menu-title {
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+color: purple;
+margin-bottom: 10px;
+}
+
+.menu-title hr {
+margin-top: 6px;
+border: none;
+height: 1px;
+background: linear-gradient(to right, transparent, purple, transparent);
+}
+
+/* ===== TABS ===== */
+.tabs {
+display: flex;
+gap: 10px;
+margin-bottom: 12px;
+}
+
+.tab {
+flex: 1;
+padding: 10px;
+background: #111;
+color: #ccc;
+border: 1px solid #333;
+border-radius: 8px;
+cursor: pointer;
+transition: 0.3s;
+font-weight: bold;
+}
+
+.tab:hover {
+color: #fff;
+border-color: purple;
+}
+
+.tab.active {
+background: linear-gradient(135deg, purple, purple);
+color: #fff;
+box-shadow: 0 0 10px rgba(168,85,247,0.8);
+}
+
+/* ===== CONTENT ===== */
+.content {
+margin-top: 10px;
+}
+
+/* ===== CHECKBOX ===== */
+.checkbox {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 10px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.checkbox input {
+display: none;
+}
+
+.checkmark {
+width: 18px;
+height: 18px;
+border-radius: 4px;
+background: #111;
+border: 1px solid #555;
+display: flex;
+align-items: center;
+justify-content: center;
+color: purple;
+font-size: 12px;
+opacity: 0;
+transition: 0.2s;
+}
+
+.checkbox input:checked + .checkmark {
+opacity: 1;
+background: purple;
+color: #fff;
+box-shadow: 0 0 8px rgba(168,85,247,0.8);
+}
+
+/* ===== SEPARATOR ===== */
+.separator {
+height: 1px;
+background: linear-gradient(to right, transparent, #444, transparent);
+margin: 12px 0;
+}
+
+/* ===== SLIDER ===== */
+.slider-container {
+margin-bottom: 12px;
+}
+
+.slider {
+width: 100%;
+appearance: none;
+height: 6px;
+background: #222;
+border-radius: 5px;
+outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+appearance: none;
+width: 18px;
+height: 18px;
+background: purple;
+border-radius: 50%;
+box-shadow: 0 0 10px rgba(168,85,247,0.8);
+cursor: pointer;
+}
+
+/* ===== COMBOBOX ===== */
+.combobox {
+width: 100%;
+padding: 10px;
+background: #111;
+color: #fff;
+border-radius: 8px;
+border: 1px solid #333;
+outline: none;
+margin-bottom: 12px;
+}
+
+.combobox:focus {
+border-color: purple;
+box-shadow: 0 0 8px rgba(168,85,247,0.8);
+}
+
+/* ===== RADIO ===== */
+.radio-group {
+margin-top: 6px;
+}
+
+.radio {
+display: flex;
+align-items: center;
+gap: 8px;
+margin-bottom: 6px;
+cursor: pointer;
+}
+
+.radio input {
+display: none;
+}
+
+.radio-mark {
+width: 16px;
+height: 16px;
+border-radius: 50%;
+border: 2px solid #555;
+}
+
+.radio input:checked + .radio-mark {
+border-color: purple;
+background: radial-gradient(circle, purple 50%, transparent 55%);
+box-shadow: 0 0 8px rgba(168,85,247,0.8);
+}
+
+/* ===== INFO TAB ===== */
+#infoTab p {
+font-size: 14px;
+margin-bottom: 6px;
+}
+
+/* ===== INJECT BUTTON ===== */
+#injectButton {
+margin-top: 12px;
+width: 100%;
+padding: 14px;
+font-size: 15px;
+font-weight: bold;
+color: #fff;
+background: linear-gradient(135deg, purple, black);
+border: none;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 0 0 15px rgba(168,85,247,0.8);
+transition: 0.3s;
+}
+
+#injectButton:hover {
+transform: scale(1.03);
+box-shadow: 0 0 25px rgba(168,85,247,0.8);
+}
+</style>
+
+</head>  
+<body>  
+    <div id="particles-js"></div>  
+    <div class="menu-container">  
+        <div class="menu">  
+            <div class="menu-title">SHOOT XIT<hr></div>  
+            <div class="tabs">  
+                <button class="tab active" onclick="showTab('aimbot')">Aimbot</button>  
+                <button class="tab" onclick="showTab('info')">Info</button>  
+            </div>  
+            <div class="content" id="content">  
+                <div id="aimbotTab">  
+                    <label class="checkbox">  
+                        <input type="checkbox">  
+                        <span class="checkmark">✔</span>  
+                        Ativar Auxílio  
+                    </label>  
+                    <label class="checkbox">  
+                        <input type="checkbox">  
+                        <span class="checkmark">✔</span>  
+                        Ativar Fov  
+                    </label>  
+                    <div class="separator"></div>  
+                    <div class="slider-container">  
+                        <input type="range" min="0" max="10" value="0" step="1" class="slider" id="fovSlider">  
+                        <span>Fov <span id="fovValue">0</span></span>  
+                    </div>  
+                    <select class="combobox">  
+                        <option>Auxilio Head</option>  
+                        <option>Auxilio Recoil</option>  
+                        <option>Auxilio Sensi</option>  
+                    </select>  
+                    <div class="separator"></div>  
+                    <span>Tipo de Aimbot:</span>  
+                    <div class="radio-group">  
+                        <label class="radio">  
+                            <input type="radio" name="aimbotType" checked="">  
+                            <span class="radio-mark"></span>  
+                            Ao Atirar  
+                        </label>  
+                        <label class="radio">  
+                            <input type="radio" name="aimbotType">  
+                            <span class="radio-mark"></span>  
+                            Ao Olhar  
+                        </label>  
+                    </div>  
+                </div><div id="infoTab" style="display: none; text-align: left;">  
+    <p><strong>Modelo:</strong> <span id="deviceModel"></span></p>  
+    <p><strong>Key:</strong> <span id="userKey">*****</span></p>  
+    <p><strong>Último Login:</strong> <span id="lastLogin">Carregando...</span></p>  
+    <p><strong>Conta Criada:</strong> <span id="creationTime">Carregando...</span></p>  
+    <hr>  
+    <p><strong>Dicas:</strong> Ative Funções no Treinamento.</p>  
+</div>  </div>  
+    </div>  
+    <div class="inject-container">  
+        <button id="injectButton" onclick="injectFunctions()">INJETAR FF NORMAL</button>  
+        <button id="injectButton" onclick="injectFunctios()">INJETAR FF MAX</button>  
+    </div>  
+      
+      
+</div>
+
+<script type="module">  
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";  
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";  
+  
+const firebaseConfig = {  
+  apiKey: "AIzaSyBCLAmIdulgRa1lit2D5aPu8QdxM2I43zA",  
+  authDomain: "painel-espanca.firebaseapp.com",  
+  projectId: "painel-espanca"  
+};  
+  
+const app = initializeApp(firebaseConfig);  
+const auth = getAuth(app);  
+  
+// 🔒 SEGURANÇA + MOSTRAR EMAIL COMO KEY + ÚLTIMO LOGIN + CONTA CRIADA  
+onAuthStateChanged(auth, (user) => {  
+  if (!user) {  
+    window.location.replace("index.html");  
+  } else {  
+    // 👉 MOSTRA O EMAIL NA KEY  
+    const keySpan = document.getElementById("userKey");  
+    if (keySpan) {  
+      keySpan.innerText = user.email;  
+    }  
+  
+    // 👉 MOSTRA O ÚLTIMO LOGIN  
+    const lastLoginSpan = document.getElementById("lastLogin");  
+    if (lastLoginSpan) {  
+      const lastLogin = new Date(user.metadata.lastSignInTime);  
+      lastLoginSpan.innerText = lastLogin.toLocaleDateString("pt-BR") + " " +  
+                               lastLogin.toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' });  
+    }  
+  
+    // 👉 MOSTRA A DATA DE CRIAÇÃO DA CONTA  
+    const creationSpan = document.getElementById("creationTime");  
+    if (creationSpan) {  
+      const creationDate = new Date(user.metadata.creationTime);  
+      creationSpan.innerText = creationDate.toLocaleDateString("pt-BR") + " " +  
+                               creationDate.toLocaleTimeString("pt-BR", { hour: '2-digit', minute: '2-digit' });  
+    }  
+  }  
+});  
+</script>  <script>  
+    function showTab(tab) {  
+        document.getElementById('aimbotTab').style.display = tab === 'aimbot' ? 'block' : 'none';  
+        document.getElementById('infoTab').style.display = tab === 'info' ? 'block' : 'none';  
+          
+        let tabs = document.querySelectorAll('.tab');  
+        tabs.forEach(button => button.classList.remove('active'));  
+        document.querySelector(`.tab:nth-child(${tab === 'aimbot' ? 1 : 2})`).classList.add('active');  
+    }  
+      
+    function detectDevice() {  
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;  
+        if (/android/i.test(userAgent)) {  
+            document.getElementById('deviceModel').innerText = 'Android';  
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {  
+            document.getElementById('deviceModel').innerText = 'iPhone';  
+        } else {  
+            document.getElementById('deviceModel').innerText = 'Desconhecido';  
+        }  
+    }  
+      
+    function injectFunctions() {  
+        window.location.href = "freefireth://";  
+    }  
+      
+    function injectFunctios() {  
+        window.location.href = "freefiremax://";  
+    }  
+      
+    document.getElementById('fovSlider').addEventListener('input', function() {  
+        document.getElementById('fovValue').innerText = this.value;  
+    });  
+      
+    detectDevice();  
+      
+    particlesJS("particles-js", {  
+        "particles": {  
+            "number": { "value": 100 },  
+            "color": { "value": "#800080" },  
+            "shape": { "type": "circle" },  
+            "opacity": { "value": 0.5 },  
+            "size": { "value": 3 },  
+            "move": { "enable": true, "speed": 5 }  
+        }  
+    });  
+      
+      
+</script>
+
+</body></html>
